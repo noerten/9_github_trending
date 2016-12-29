@@ -1,5 +1,6 @@
-import requests
 import datetime
+
+import requests
 
 
 def get_trending_repositories(quantity=20):
