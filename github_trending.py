@@ -1,5 +1,6 @@
-import requests
 import datetime
+
+import requests
 
 
 def get_trending_repositories(quantity=20):
@@ -15,14 +16,14 @@ def get_trending_repositories(quantity=20):
 
 
 def get_printable_repository_info(repository):
-    name = repository['full_name']
+    title = repository['full_name']
     stars = repository['stargazers_count']
     open_issues = repository['open_issues_count']
     url = repository['html_url']
-    printable_info = ('{stars} star(s), project: {name}, open issues: '
+    printable_info = ('{stars} star(s), project: {title}, open issues: '
                       '{open_issues}, url: {url}'.format(
                           stars=stars,
-                          name=name,
+                          title=title,
                           open_issues=open_issues,
                           url=url,
                           ))
